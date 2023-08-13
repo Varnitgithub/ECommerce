@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839492657760",
+    "project_id": "ecart-79cd2",
+    "storage_bucket": "ecart-79cd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839492657760:android:1e75c17dcc4eae84ad5905",
+        "android_client_info": {
+          "package_name": "com.varnittyagi.ecart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839492657760-gm4k7qhd2c46ssldtp80968aq9unric0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ5YDBehOlUDLZxlq61HeNwUfGntRbxcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839492657760-gm4k7qhd2c46ssldtp80968aq9unric0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+        <LinearLayout
+            android:id="@+id/linear_LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.mancj.materialsearchbar.MaterialSearchBar
+                            android:id="@+id/searchBar"
+                            style="@style/MaterialSearchBarLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FBFDFF"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="#FBFDFF"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:mt_hint="Search your favourite product"
+                            app:mt_maxSuggestionsCount="10"
+                            app:mt_placeholder="ECart"
+                            app:mt_speechMode="true" />
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                                android:id="@+id/carousel"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                app:autoPlay="true"
+                                android:layout_margin=".8dp"
+                                app:showNavigationButtons="false" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin=".8dp"
+                                android:background="#00000000"
+                                app:cardCornerRadius="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/categories_back">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/categoriesRecyclerview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="1dp"
+                                        android:padding="2sp"
+                                        android:background="@drawable/categorybackground"
+                                        tools:itemCount="1"
+                                        tools:listitem="@layout/category_item" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/mainItemsRecyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/main_items" />
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBarMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

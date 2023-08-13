@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3sp"
+                android:background="#E0E0E0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/productNameDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product name"
+                    android:layout_margin="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/decreaseItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="20dp"
+                        android:textSize="35dp"
+                        android:backgroundTint="#4FC3F7"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/noOfItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:text="1" />
+
+                    <Button
+                        android:id="@+id/increaseItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:textSize="35dp"
+                        android:backgroundTint="#4FC3F7"
+                        android:layout_marginEnd="20dp"
+                        android:text="+" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/cancelDialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="cancel"
+                        android:layout_marginStart="30dp"
+android:backgroundTint="#4FC3F7"
+                        android:padding="3dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="20dp" />
+
+                    <Button
+                        android:id="@+id/saveDialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="save"
+                        android:backgroundTint="#4FC3F7"
+                        android:padding="3dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

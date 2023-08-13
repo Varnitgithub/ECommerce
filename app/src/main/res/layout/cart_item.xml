@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <LinearLayout
+      android:id="@+id/cartLL"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="1sp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:background="#F2F3F4"
+          android:padding="3sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <ImageView
+              android:id="@+id/cartItemImage"
+              android:layout_width="42dp"
+              android:layout_height="42dp"
+              android:layout_gravity="center"
+              android:layout_margin="3sp"
+              android:scaleType="fitCenter"
+              app:srcCompat="@drawable/img" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="1sp"
+              android:orientation="vertical">
+
+
+              <TextView
+                  android:id="@+id/cartItemName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Product Name"
+                  android:textSize="16sp" />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="horizontal">
+
+                  <ImageButton
+                      android:id="@+id/quantityDecrease"
+
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/baseline_horizontal_rule_24"
+                      tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                  <TextView
+                      android:id="@+id/cartItemQuantity"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:drawableLeft="@drawable/newicon"
+                      android:drawablePadding="5sp"
+                      android:gravity="start"
+                      android:padding="3sp"
+                      android:text="1 item(s)"
+                      android:textSize="12sp" />
+
+                  <ImageButton
+                      android:id="@+id/quantityIncrease"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/baseline_add_24"
+
+                      tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                  <TextView
+                      android:id="@+id/cartItemPrice"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:gravity="end"
+                      android:text="$ 19990"
+                      android:textColor="#3A55EC"
+                      android:textColorHighlight="#3851DF"
+                      android:textSize="16sp"
+                      android:textStyle="bold" />
+              </LinearLayout>
+          </LinearLayout>
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#A9CCE3"
+          />
+  </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

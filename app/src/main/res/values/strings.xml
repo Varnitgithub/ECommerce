@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ECart</string>
+    <string name="internet_unavailable">internet unavailable</string>
+    <string name="no_internet">No internet</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="internet_is_not_connected">internet is not connected</string>
+</resources>
